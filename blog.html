@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Blog Section</title>
+    <script
+      src="https://kit.fontawesome.com/4a314d7cd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { poppins: ["Poppins", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .ellipsis {
+          display: -webkit-box;
+          text-align: justify;
+          text-overflow: -o-ellipsis-lastline;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 w-4/5 mx-auto font-poppins tracking-wide">
+    <!-- -------------------------- todo: navbar -------------------------- -->
+    <header
+      class="text-gray-50 justify-center text-5xl body-font flex items-center my-5 relative after:border-b-[1px] after:border-gray-300 after:w-[105%] after:left-1/2 after:-translate-x-1/2 after:absolute after:-bottom-5"
+    >
+      <p>Blog Section</p>
+    </header>
+    <ol class="border-l border-gray-100 w-full md:w-3/4 text-justify mx-auto">
+      <li>
+        <br />
+        <div class="mt-0.5 ml-4 mb-6">
+          <h4 class="text-gray-100 font-semibold text-xl mb-1.5 capitalize">
+            Difference Between local storage and session storage in JavaScript
+          </h4>
+          <p class="text-gray-400 mb-3">
+            The difference between sessionStorage and localStorage is that
+            localStorage data does not expire, whereas sessionStorage data is
+            cleared when the page session ends. A unique page session gets
+            created once a document is loaded in a browser tab. Page sessions
+            are valid for only one tab at a time. Pages are only saved for the
+            amount of time that the tab or the browser is open; they do not
+            persist <strong>after the page reloads and restores.</strong> The
+            storage capacity of session storage is <strong>5MB</strong> and the
+            storage capacity of local storage is <strong>5MB/10MB.</strong> As
+            local storage is not session-based, it must be deleted via
+            javascript or manually
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="flex flex-start items-center pt-2">
+          <div class="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
+        </div>
+        <div class="mt-0.5 ml-4 mb-6">
+          <h4 class="text-gray-100 font-semibold text-xl mb-1.5 capitalize">
+            Difference Between Global Scope and Block Scope
+          </h4>
+          <p class="text-gray-400 mb-3">
+            The variables defined outside of any function or curly brackets are
+            known as global variables and have
+            <strong>global scope. </strong>Global scope means that the variables
+            can be accessed from any part of that program, any function or
+            conditional state can access that variable. It is not a good
+            practice to use global variables when they are not needed as every
+            code block will have access to those variables. Block scope is also
+            a sub-type of local scope. The <strong>block scope </strong>can be
+            defined as the scope of the variables inside the curly brackets {}.
+            Now, these curly brackets can be of loops, or conditional
+            statements, or something else. You are only allowed to refer to
+            these variables from within the curly brackets {}.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="flex flex-start items-center pt-2">
+          <div class="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
+        </div>
+        <div class="mt-0.5 ml-4 pb-5">
+          <h4 class="text-gray-100 font-semibold text-xl mb-1.5 capitalize">
+            What is event loop in javaScript?
+          </h4>
+          <p class="text-gray-400 mb-3">
+            Event Loop that keeps running continuously and checks the Main
+            stack, if it has any frames to execute, if not then it checks
+            Callback queue, if Callback queue has codes to execute then it pops
+            the message from it to the Main Stack for the execution.
+          </p>
+          <img src="./event-loop.gif" alt="Event loop described" />
+        </div>
+      </li>
+      <li>
+        <div class="flex flex-start items-center pt-2">
+          <div class="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
+        </div>
+        <div class="mt-0.5 ml-4 pb-5">
+          <h4 class="text-gray-100 font-semibold text-xl mb-1.5 capitalize">
+            which Scenarios does make undefined?
+          </h4>
+          <ul class="text-gray-400 mb-3 list-disc list-inside">
+            <li>Uninitialized variable (even if declared)</li>
+            <li>Accessing a non-existing property in an object</li>
+            <li>Accessing an array element with an out-of-bounds index</li>
+            <li>Function parameter that isn’t passed</li>
+            <li>Function non-existing return value</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </body>
+</html>
