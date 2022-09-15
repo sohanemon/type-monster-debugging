@@ -21,7 +21,15 @@
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { poppins: ["Poppins", "sans-serif"] },
+          },
+        },
+      };
+    </script>
     <style type="text/tailwindcss">
       @layer components {
         .ellipsis {
